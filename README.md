@@ -3,7 +3,7 @@ Wordle game (NYTimes)
 
 I have made this game using Java(swing and awt).
 
-Brief Description :
+* Brief Description :
 
 I have used 6 JTextFields for 6 words that user will input. The TextField has a 5 character limit and i have added functionality to format it to capital letters only.
 To enter any word in the textfield, user can either use keyboard or the simulated keyboard i have added in the frame, user can use that one with a mouse.
