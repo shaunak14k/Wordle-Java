@@ -10,7 +10,9 @@ To enter any word in the textfield, user can either use keyboard or the simulate
 
 * For the simulated keyboard, i have used 3 JPanels and 27 JButtons, (10 JButtons on panel1, 9 JButtons on panel2 and 8 JButtons on panel 3). 
 
-* After hitting enter/ clicking enter key, the word will be first checked if it exists in the text file, if it doesn't then a message will be shown as "word does not exist".
+* To get the "wordle question word", i have generated a random number from 1 to 5757 (the total number of lines in the word text file). The word that exists at the random number (line no.) will be the word taken as wordle for rest of the program/game.
+
+* After entering any word and hitting enter/ clicking enter key, the word will be first checked if it exists in the text file, if it doesn't then a message will be shown as "word does not exist".
 If the word exists, then the word will be compared character by chracter with the "wordle question word".
 
 * If the position and letter both matches then it will show in green-background colored label, if any letter of input word matches with any letter of "wordle word" then it will be shown in yellow-background colored label, if neither letter nor the location matches then no background color will be there for the label.
@@ -44,7 +46,7 @@ There could be some improvements done : Backspace functionality is missing in th
 
 5. Screenshots 
 
-![Wordle-NYTimes Clone 02-05-2022 09_18_49](https://user-images.githubusercontent.com/30958999/166182120-1179ce6b-6753-44ce-b8e6-6f723bdccfc5.png)
+!![Wordle-NYTimes Clone 02-05-2022 11_28_06](https://user-images.githubusercontent.com/30958999/166190954-c0515232-aeaa-4c28-885b-69cada344093.png)
 ![Wordle-NYTimes Clone 02-05-2022 09_19_42](https://user-images.githubusercontent.com/30958999/166182134-38405b4a-70dc-41fa-a682-0de99ebcc8cf.png)
 ![Wordle-NYTimes Clone 02-05-2022 09_20_53](https://user-images.githubusercontent.com/30958999/166182141-490aed71-9a6f-4100-9b02-844d46d07a72.png)
 ![Select an Option 02-05-2022 09_21_01](https://user-images.githubusercontent.com/30958999/166182161-755c8f60-3e7f-4f08-be67-40863852284f.png)
