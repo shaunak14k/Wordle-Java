@@ -21,28 +21,30 @@ So, as the enter is hit, the JTextField will be replaced by a JLabel with all th
 * After this, the cursor will move to the next TextField.
 
 * This process will continue until Player either wins or loses. If player wins, they will get a message of congratulations and an option if they want to play again. If the player loses then they will be shown the answer and option if they want to play again.
-
-
-
+.
+.
+.
 
 2. Technologies :
 
 I have used Java swing and awt. I used IntelliJ IDEA as the IDE while building this game. 
-
-
+.
+.
+.
 
 
 3. Launch: 
 
 I have added the entire IntelliJ project folder here in the repository, no external libraries were added. Java version used while building this is the Java 17.0.3 LTS.
-
-
-
+.
+.
+.
 
 4. NOTES : 
 There could be some improvements done : Backspace functionality is missing in the simulated keyboard. Unnecessary message is shown sometimes if enter key is pressed through simulated keyboard.
-
-
+.
+.
+.
 
 
 5. Screenshots 
