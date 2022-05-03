@@ -144,6 +144,7 @@ public class MainWordle extends JFrame
 
         //Take the word that is at randomLineNumber and that word will be the word for the game
 
+        //randomLineNumber = 2763;
 
             wordFileURL = new URL("https://raw.githubusercontent.com/charlesreid1/five-letter-words/master/sgb-words.txt");
 
@@ -627,15 +628,15 @@ public class MainWordle extends JFrame
                     // LETTER 5
                     if(word1.charAt(4) == word_for_wordle.charAt(4))
                     {
-                     word1Label5.setOpaque(true);
-                     word1Label5.setBackground(Color.green);
-                     word1Label5.setText(String.valueOf(word1.charAt(4)));
+                         word1Label5.setOpaque(true);
+                         word1Label5.setBackground(Color.green);
+                         word1Label5.setText(String.valueOf(word1.charAt(4)));
 
                         greenLettersOnKeyboardLayout(word1.charAt(4));
                     }
                     else if(word_for_wordle.indexOf(word1.charAt(4))!=-1)
                      {
-                         word1Label4.setOpaque(true);
+                         word1Label5.setOpaque(true);
                          word1Label5.setBackground(Color.yellow);
                          word1Label5.setText(String.valueOf(word1.charAt(4)));
 
@@ -830,7 +831,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word2.charAt(4))!=-1)
                     {
-                        word2Label4.setOpaque(true);
+                        word2Label5.setOpaque(true);
                         word2Label5.setBackground(Color.yellow);
                         word2Label5.setText(String.valueOf(word2.charAt(4)));
 
@@ -924,7 +925,7 @@ public class MainWordle extends JFrame
                     word3Label5.setBorder(border);
 
 
-                    // FOR FIRST WORD ***********************
+                    // FOR THIRD WORD ***********************
                     // LETTER 1
                     if(word3.charAt(0) == word_for_wordle.charAt(0))
                     {
@@ -1028,7 +1029,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word3.charAt(4))!=-1)
                     {
-                        word3Label4.setOpaque(true);
+                        word3Label5.setOpaque(true);
                         word3Label5.setBackground(Color.yellow);
                         word3Label5.setText(String.valueOf(word3.charAt(4)));
 
@@ -1225,7 +1226,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word4.charAt(4))!=-1)
                     {
-                        word4Label4.setOpaque(true);
+                        word4Label5.setOpaque(true);
                         word4Label5.setBackground(Color.yellow);
                         word4Label5.setText(String.valueOf(word4.charAt(4)));
 
@@ -1422,7 +1423,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word5.charAt(4))!=-1)
                     {
-                        word5Label4.setOpaque(true);
+                        word5Label5.setOpaque(true);
                         word5Label5.setBackground(Color.yellow);
                         word5Label5.setText(String.valueOf(word5.charAt(4)));
 
@@ -1617,7 +1618,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word6.charAt(4))!=-1)
                     {
-                        word6Label4.setOpaque(true);
+                        word6Label5.setOpaque(true);
                         word6Label5.setBackground(Color.yellow);
                         word6Label5.setText(String.valueOf(word6.charAt(4)));
 
@@ -1654,6 +1655,7 @@ public class MainWordle extends JFrame
             if(chr == keyboardCharArrayRow1[i])
             {
                 keyboardButtonRow1[i].setBackground(Color.lightGray);
+                return;
             }
         }
         for(int i=0; i<9; i++)
@@ -1661,6 +1663,7 @@ public class MainWordle extends JFrame
             if(chr == keyboardCharArrayRow2[i])
             {
                 keyboardButtonRow2[i].setBackground(Color.lightGray);
+                return;
             }
         }
         for(int i=0; i<7; i++)
@@ -1668,8 +1671,11 @@ public class MainWordle extends JFrame
             if(chr== keyboardCharArrayRow3[i])
             {
                 keyboardButtonRow3[i+1].setBackground(Color.lightGray);
+                return;
             }
         }
+
+        return;
     }
 
     void yellowLettersOnKeyboardLayout(char chr)
@@ -1679,6 +1685,7 @@ public class MainWordle extends JFrame
             if(chr == keyboardCharArrayRow1[i])
             {
                 keyboardButtonRow1[i].setBackground(Color.yellow);
+                return;
             }
         }
         for(int i=0; i<9; i++)
@@ -1686,15 +1693,18 @@ public class MainWordle extends JFrame
             if(chr == keyboardCharArrayRow2[i])
             {
                 keyboardButtonRow2[i].setBackground(Color.yellow);
+                return;
             }
         }
         for(int i=0; i<7; i++)
         {
-            if(chr== keyboardCharArrayRow3[i])
+            if(chr == keyboardCharArrayRow3[i])
             {
                 keyboardButtonRow3[i+1].setBackground(Color.yellow);
+                return;
             }
         }
+        return;
     }
 
 
@@ -1705,6 +1715,7 @@ public class MainWordle extends JFrame
             if(chr == keyboardCharArrayRow1[i])
             {
                 keyboardButtonRow1[i].setBackground(Color.green);
+                return;
             }
         }
         for(int i=0; i<9; i++)
@@ -1712,6 +1723,7 @@ public class MainWordle extends JFrame
             if(chr == keyboardCharArrayRow2[i])
             {
                 keyboardButtonRow2[i].setBackground(Color.green);
+                return;
             }
         }
         for(int i=0; i<7; i++)
@@ -1719,8 +1731,10 @@ public class MainWordle extends JFrame
             if(chr== keyboardCharArrayRow3[i])
             {
                 keyboardButtonRow3[i+1].setBackground(Color.green);
+                return;
             }
         }
+        return;
     }
 
     JLabel setPropertiesForWordLabel(JLabel thisJLabel, int XAxis, int YAxis)
@@ -2225,7 +2239,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word1.charAt(4))!=-1)
                     {
-                        word1Label4.setOpaque(true);
+                        word1Label5.setOpaque(true);
                         word1Label5.setBackground(Color.yellow);
                         word1Label5.setText(String.valueOf(word1.charAt(4)));
 
@@ -2250,7 +2264,7 @@ public class MainWordle extends JFrame
                     word2TextField.requestFocus();
                 }
 
-                if (word2TextField.isEditable()) {
+                else if (word2TextField.isEditable()) {
                     boolean wordFlag = false;
 
                     word2 = word2TextField.getText();
@@ -2411,7 +2425,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word2.charAt(4))!=-1)
                     {
-                        word2Label4.setOpaque(true);
+                        word2Label5.setOpaque(true);
                         word2Label5.setBackground(Color.yellow);
                         word2Label5.setText(String.valueOf(word2.charAt(4)));
 
@@ -2436,7 +2450,7 @@ public class MainWordle extends JFrame
                     word3TextField.requestFocus();
                 }
 
-                if (word3TextField.isEditable()) {
+                else if (word3TextField.isEditable()) {
                     boolean wordFlag = false;
 
                     word3 = word3TextField.getText();
@@ -2599,7 +2613,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word3.charAt(4))!=-1)
                     {
-                        word3Label4.setOpaque(true);
+                        word3Label5.setOpaque(true);
                         word3Label5.setBackground(Color.yellow);
                         word3Label5.setText(String.valueOf(word3.charAt(4)));
 
@@ -2625,7 +2639,7 @@ public class MainWordle extends JFrame
                 }
 
 
-                if (word4TextField.isEditable())
+                else if (word4TextField.isEditable())
                 {
                     boolean wordFlag = false;
 
@@ -2789,7 +2803,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word4.charAt(4))!=-1)
                     {
-                        word4Label4.setOpaque(true);
+                        word4Label5.setOpaque(true);
                         word4Label5.setBackground(Color.yellow);
                         word4Label5.setText(String.valueOf(word4.charAt(4)));
 
@@ -2814,7 +2828,7 @@ public class MainWordle extends JFrame
                     word5TextField.requestFocus();
                 }
 
-                if(word5TextField.isEditable())
+                else if(word5TextField.isEditable())
                 {
                     boolean wordFlag = false;
 
@@ -2978,7 +2992,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word5.charAt(4))!=-1)
                     {
-                        word5Label4.setOpaque(true);
+                        word5Label5.setOpaque(true);
                         word5Label5.setBackground(Color.yellow);
                         word5Label5.setText(String.valueOf(word5.charAt(4)));
 
@@ -3003,7 +3017,7 @@ public class MainWordle extends JFrame
                     word6TextField.requestFocus();
                 }
 
-                if(word6TextField.isEditable())
+                else if (word6TextField.isEditable())
                 {
                     boolean wordFlag = false;
 
@@ -3165,7 +3179,7 @@ public class MainWordle extends JFrame
                     }
                     else if(word_for_wordle.indexOf(word6.charAt(4))!=-1)
                     {
-                        word6Label4.setOpaque(true);
+                        word6Label5.setOpaque(true);
                         word6Label5.setBackground(Color.yellow);
                         word6Label5.setText(String.valueOf(word6.charAt(4)));
 
@@ -3188,6 +3202,8 @@ public class MainWordle extends JFrame
                     word5TextField.setEditable(false);
                     word6TextField.requestFocus();
                 }
+
+                else{}
             }
     } );
 
