@@ -40,7 +40,7 @@ I have added the entire IntelliJ project folder here in the repository, no exter
 
 4. NOTES and Bugs: 
 There could be some improvements done : Backspace functionality is missing in the simulated keyboard. 
-If a letter is perfectly matched it is typed again in a wrong location (and it is not repeated again in the word) then it still shows in yellow color.
+If a letter is perfectly matched and it is typed again in a wrong location (and it is not repeated again in the word) then it still shows in yellow color.
 
 
 
